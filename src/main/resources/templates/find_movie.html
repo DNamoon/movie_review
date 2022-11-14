@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>검색 결과</title>
+
+  <script>
+    var movie_name = document.getElementById('movie_name').value;
+  </script>
+  <%
+  String movie_name = request.getParameter("movie_name");
+  %>
+
+</head>
+<body>
+<head th:replace ="header.html :: top_bar"></head>
+
+<div id="find">
+  <table border="1">
+
+    <tr>
+      <th>게시글 번호</th><th>영화제목</th><th>글 제목</th><th>작성자</th>
+    </tr>
+
+    <!--반복문 써야 할텐데-->
+    <tr>
+      <td>getParameter("id")</td>
+      <td><script>document.write(movie_name);</script></td>
+      <td><a href = "getParameter('title')">제목 받아와야함 </td>
+      <td><%=rs.getParameter("name") %></td>
+    </tr>
+  </table>
+</div>
+
+<br/>
+<input type="button" value="검색창으로 돌아가기" onclick="location.replace('search')" />
+<input type="button" value="메인으로" onclick="location.replace('index')">
+</body>
+</html>

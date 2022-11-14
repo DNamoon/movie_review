@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>검색 페이지</title>
+
+</head>
+<body>
+
+<head th:replace ="header.html :: top_bar"></head>
+
+<form action="find_movie">
+  <h2>찾고싶은 영화의 리뷰를 검색해보세요!</h2>
+  영화검색 : <input type="text" name="movie_name" placeholder="영화이름을 검색해보세요" />
+  <input type="submit" value="검색" /> <br/>
+  <input type="button" value="메인으로" onclick="location.replace('index')">
+</form>
+</body>
+</html>

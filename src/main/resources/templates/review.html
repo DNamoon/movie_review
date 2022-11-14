@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리뷰페이지</title>
+</head>
+
+<body>
+<head th:replace ="header.html :: top_bar"></head>
+
+<div id="review">
+  <form id="review_Form" action="contents">
+    <table border="1" style="margin: auto">
+      <tr>
+        <td>게시글 번호</td>
+        <td>[[${dto.num}]]</td>
+      </tr>
+      <tr>
+        <td>영화 제목</td>
+        <td>[[${dto.movie}]]</td>
+      </tr>
+      <tr>
+        <td>글 제목</td>
+        <td>[[${dto.title}]]</td>
+      </tr>
+      <tr>
+        <td>작성자</td>
+        <td>[[${dto.writer}]]</td>
+      </tr>
+      <tr>
+        <td>한줄평</td>
+        <td>[[${review}]]</td>
+      </tr>
+    </table>
+    <input type="submit" value="전체 글 목록으로 돌아가기">
+    <input type="button" value="메인으로" onclick="location.replace('index')">
+  </form>
+</div>
+</body>
+</html>

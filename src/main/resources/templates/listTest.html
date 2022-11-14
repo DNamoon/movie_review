@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>listTest 페이지 / 사용자 목록</title>
+</head>
+<body>
+<head th:replace ="header.html :: top_bar"></head>
+
+<ul>
+    <li th:each="dto : ${list2}">
+        [[${dto.rownum}]]
+        [[${dto.num}]]
+        [[${dto.movie}]]
+        [[${dto.title}]]
+        [[${dto.review}]]
+        [[${dto.writer}]]
+    </li>
+</ul>
+</body>
+
+</html>

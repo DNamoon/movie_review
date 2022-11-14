@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>등록확인 페이지</title>
+</head>
+
+<body>
+<head th:replace ="header.html :: top_bar"></head>
+
+등록되었습니다. (아직임. DB연결해서 데이터 넣는 코드 추가해야함.)<br/><br/>
+<button onclick="location.replace('index')">맨 처음으로</button>
+<button onclick="location.replace('contents')">전체글 보러가기</button>
+
+<!--
+<button onclick="location.href = 'contents.html'">전체글 보러가기</button>
+이 부분은 location.href로 안 바꾸고 replace로 하는게 뒤로가기 할 때 등록확인 페이지가 안 나타나네. -->
+</body>
+</html>

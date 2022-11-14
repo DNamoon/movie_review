@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Lover</title>
+
+    <script src="jquery-1.9.1.min.js"></script>
+<!--    <script>-->
+<!--            $(document).ready(function () {-->
+<!--            $("#logo").click(function () {-->
+<!--                location.replace('index.html');-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+    <style>
+        div#index{
+            cursor: pointer;
+        }
+
+        nav.menubar li {
+            padding: 8px;
+            margin: 5;
+            text-align: center;
+            border: solid 1px;
+            border-collapse: 5px;
+            background-color: gray;
+            display: inline;
+            margin-left: 30px;
+
+
+        }
+        nav ul {
+            border-top:1px solid red;
+            border-bottom:1px solid red;
+            padding: 10px 0;
+
+        }
+
+        nav.menubar li a {
+            text-decoration: none; color: black;
+        }
+        nav.menubar li a:hover { text-decoration: underline;}
+    </style>
+
+</head>
+
+<body>
+<header>
+    <div id="index">
+        <img src="movie_logo.PNG" id="logo" width="200" height="100" onclick="location.replace('index')"text-align="center"> Movie
+        Lover
+    </div>
+    <button onclick="location.href = 'login'">로그인</button>
+    <button onclick="location.replace('register')">회원가입</button>
+</header>
+<hr>
+<nav class="menubar" style="text-align:center">
+    <ul>
+        <li><a href="search">영화검색</a></li>
+        <li><a href="contents">전체글 보기</a></li>
+        <li><a href="write">글 작성하기</a></li>
+    </ul>
+</nav>
+<br />
+<div style="text-align:center">
+    <img src="main.jpg" width="60%" height="40%">
+</div>
+</body>
+
+</html>

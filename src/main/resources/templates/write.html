@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 작성페이지</title>
+</head>
+
+<body>
+<head th:replace ="header.html :: top_bar"></head>
+
+<div id="write">
+  <form id="write_Form" action="write_confirm">
+    <table border="1">
+      <tr>
+        <td>영화 제목</td>
+        <td><input type="text" id="movie_name"></td>
+      </tr>
+      <tr>
+        <td>글 제목</td>
+        <td><input type="text" id="title"></td>
+      </tr>
+      <tr>
+        <td>작성자</td>
+        <td><input type="text" id="name"></td>
+      </tr>
+      <tr>
+        <td>한줄평</td>
+        <td><textarea type="text" id="text" size="50" placeholder="50글자 미만으로 작성하세요." rows="5" cols="50" ></textarea></td>
+      </tr>
+    </table>
+    <input type="submit" value="등록하기">
+    <input type="button" value="메인으로" onclick="location.replace('index')">
+  </form>
+</div>
+</body>
+</html>

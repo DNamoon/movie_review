@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면</title>
+
+    <style>
+        #field{
+            width :30%;
+            margin : 0 auto;
+        }
+        div#login{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<head th:replace ="header.html :: top_bar"></head>
+<div>
+
+<form id="login_form" action="confirm_login.jsp"> <!--로그인 확인할 수 있는 jsp 파일 따로 만들어야 할 듯-->
+
+    <div id="login">
+        <fieldset id="field">
+            <div id="login_top" style="background-color:aquamarine; text-align: center;">
+                <h2>로그인</h2>
+            </div>
+            <label name="id">아 이 디 :&nbsp; </label>
+            <input type="text" name="id" id="text1"><br/>
+            <label name="password">패스워드 : </label>
+            <input type="password" name="password" id="text2"><br/><br/>
+            <input type="submit" value="로그인하기">
+        </fieldset>
+    </div>
+</form>
+</div>
+</body>
+</html>

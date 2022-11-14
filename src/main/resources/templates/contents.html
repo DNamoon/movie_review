@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전체 글 목록</title>
+  <style>
+    #all_contents{
+      text-align: center;
+    }
+    table {
+      text-align: center;
+      margin: auto;
+      /*테이블 가운데 정렬*/
+    }
+    .num {
+      width: 50px
+    }
+
+    .title {
+      width: 300px;
+    }
+
+    .movie {
+      width: 150px;
+    }
+
+    .writer {
+      width: 80px
+    }
+  </style>
+</head>
+
+<body>
+
+<head th:replace ="header.html :: top_bar"></head>
+
+<div id="all_contents">
+  <table border="1" >
+    <tr>
+      <th class="num">번호</th>
+      <th class="title">글 제목</th>
+      <th class="movie">영화제목</th>
+      <th class="writer">작성자</th>
+    </tr>
+    <!--다 가져와야 하니까 반복해야 할거고 -->
+    <!--Thymeleaf 써야하네. -->
+    <tr th:each="dto : ${list}">
+        <td class="num">[[${dto.num}]]</td>
+        <td class="title"><a th:href="@{/review(title=${dto.title})}">[[${dto.title}]]</a></td>
+<!--      <a th:href="@{/review(title=${dto.title})}">-->
+        <td class="movie">[[${dto.movie}]]</td>
+        <td class="writer">[[${dto.writer}]]</td>
+    </tr>
+    <tr>
+      <td>num</td>
+      <td><a href="#">title 받아오고</a></td>
+      <td>movie_name 받아오고</td>
+      <td>name 받아오고</td>
+    </tr>
+  </table>
+</div>
+<br/>
+<input type="button" value="메인으로" onclick="location.replace('index')">
+</body>
+</html>
